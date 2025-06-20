@@ -1,138 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Analyst Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="nav-brand">Portfolio</div>
-        <ul class="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="nav-brand">Portfolio</div>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Data Analyst Portfolio</h1>
-            <p class="subtitle">Transforming Data into Insights</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn primary">View Projects</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
-            </div>
+      <div class="hero-content">
+        <h1>Data Analyst Portfolio</h1>
+        <p class="subtitle">Transforming Data into Insights</p>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
         </div>
+      </div>
     </section>
 
     <section id="projects" class="section">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <canvas id="chart1"></canvas>
-                </div>
-                <h3>Data Visualization Project</h3>
-                <p>Interactive visualization of sample data analysis</p>
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <a
+          href="https://github.com/johnandreiespechan/PROJECT1-DASHBOARD-/blob/main/P1%20(JOB%20TITLES%20DASHBOARD).xlsx"
+        >
+          <div class="project-card">
+            <div class="project-image">
+              <img src="img/dashboard-2.png" alt="" />
             </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <canvas id="chart2"></canvas>
-                </div>
-                <h3>Statistical Analysis</h3>
-                <p>Comprehensive statistical analysis project</p>
-            </div>
+            <h3>Data Visualization Project</h3>
+            <p>
+              <b>Dashboard</b> that transcribes what are the difference between
+              specific job titles in terms of salary
+            </p>
+            <p>Tool: Excel</p>
+          </div>
+        </a>
+        <div class="project-card">
+          <div class="project-image">
+            <canvas id="chart2"></canvas>
+          </div>
+          <h3>Statistical Analysis</h3>
+          <p>Comprehensive statistical analysis project</p>
         </div>
+      </div>
     </section>
     <section id="skills" class="section">
-        <h2>Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Data Analysis</h3>
-                <div class="skill-item">
-                    <span>Python</span>
-                    <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>SQL</span>
-                    <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>Excel</span>
-                    <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
-                </div>
+      <h2>Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Data Analysis</h3>
+          <div class="skill-item">
+            <span>Python</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 80%"></div>
             </div>
-            <div class="skill-category">
-                <h3>Visualization</h3>
-                <div class="skill-item">
-                    <span>Tableau</span>
-                    <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <span>Power BI</span>
-                    <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
-                </div>
+          </div>
+          <div class="skill-item">
+            <span>SQL</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%"></div>
             </div>
+          </div>
+          <div class="skill-item">
+            <span>Excel</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%"></div>
+            </div>
+          </div>
         </div>
+        <div class="skill-category">
+          <h3>Visualization</h3>
+          <div class="skill-item">
+            <span>Tableau</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <span>Power BI</span>
+            <div class="progress-bar">
+              <div class="progress" style="width: 65%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="education" class="section">
-        <h2>Education</h2>
-        <div class="education-card">
-            <h3>Bachelor of Science in Information Technology</h3>
-            <p>Currently pursuing</p>
-            <ul class="education-details">
-                <b>Course Taken</b>
-                <li>Data Structures and Algorithms</li>
-                <li>Database Management System</li>
-                <li>Computer Programming</li>
-                <li>Advance Computer Programming</li>
-                <li>Computer Networking</li>
-                <li>Object-Oriented Programming</li>
-            </ul>
-        </div>
+      <h2>Education</h2>
+      <div class="education-card">
+        <h3>Bachelor of Science in Information Technology</h3>
+        <p>Currently pursuing</p>
+        <ul class="education-details">
+          <b>Course Taken</b>
+          <li>Data Structures and Algorithms</li>
+          <li>Database Management System</li>
+          <li>Computer Programming</li>
+          <li>Advance Computer Programming</li>
+          <li>Computer Networking</li>
+          <li>Object-Oriented Programming</li>
+        </ul>
+      </div>
     </section>
 
-    <section id="blog" class="section">
-        <h2>Latest Articles</h2>
-        <div class="blog-grid">
-            <article class="blog-card">
-                <h3>Introduction to Data Analysis</h3>
-                <p>Understanding the basics of data analysis and its importance in modern business.</p>
-                <a href="#" class="read-more">Read More</a>
-            </article>
-            <article class="blog-card">
-                <h3>Data Visualization Best Practices</h3>
-                <p>Learn how to create effective and impactful data visualizations.</p>
-                <a href="#" class="read-more">Read More</a>
-            </article>
-        </div>
+    <section id="achievements" class="section">
+      <h2>Achievements</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <h3>Badges</h3>
+          <p>
+            Understanding the basics of data analysis and its importance in
+            modern business.
+          </p>
+          <a href="#" class="read-more">Read More</a>
+        </article>
+        <article class="blog-card">
+          <h3>Certificates</h3>
+          <p>
+            Learn how to create effective and impactful data visualizations.
+          </p>
+          <a href="#" class="read-more">Read More</a>
+        </article>
+      </div>
     </section>
 
     <section id="contact" class="section">
-        <h2>GET IN TOUCH</h2>
-        <div class="contact-container">
-            <div class="social-links">
-                <a href="https://www.upwork.com/freelancers/~01d5ae05fca13f261a?viewMode=1" class="social-icon"><i class="fab fa-upwork"></i></a>
-                <a href="https://github.com/johnandreiespechan" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.facebook.com/aanjo.chan" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/jhndreichan" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://mail.google.com/mail/u/0/#search/johnandreiespechan%40gmail.com?compose=DmwnWrRmTwpTtKQqwWLNWrFFPKwmmFplfgCBthvbbtvMHVFXQXrPBSqmDJwpzqTzhdtsbLWtpvPq" class="social-icon"><i class="fab fa-google"></i></a>
-            </div>
+      <h2>GET IN TOUCH</h2>
+      <div class="contact-container">
+        <div class="social-links">
+          <a
+            href="https://www.upwork.com/freelancers/~01d5ae05fca13f261a?viewMode=1"
+            class="social-icon"
+            ><i class="fab fa-upwork"></i
+          ></a>
+          <a href="https://github.com/johnandreiespechan" class="social-icon"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.facebook.com/aanjo.chan" class="social-icon"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/jhndreichan" class="social-icon"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://mail.google.com/mail/u/0/#search/johnandreiespechan%40gmail.com?compose=DmwnWrRmTwpTtKQqwWLNWrFFPKwmmFplfgCBthvbbtvMHVFXQXrPBSqmDJwpzqTzhdtsbLWtpvPq"
+            class="social-icon"
+            ><i class="fab fa-google"></i
+          ></a>
         </div>
+      </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Data Analyst Portfolio. All rights reserved.</p>
+      <p>&copy; 2025 Data Analyst Portfolio. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
-</body>
-</html> 
+  </body>
+</html>

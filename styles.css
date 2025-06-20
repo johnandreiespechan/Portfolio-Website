@@ -135,8 +135,32 @@ body {
 }
 
 .project-image {
-    height: 200px;
     background: var(--light-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 200px;
+    padding: 0;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-image canvas {
+    width: 100% !important;
+    height: 250px !important;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
 .project-card h3 {
@@ -147,6 +171,11 @@ body {
 .project-card p {
     padding: 0 1rem 1rem;
     color: var(--text-color);
+}
+
+.projects-grid a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Skills Section */
