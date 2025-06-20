@@ -1,15 +1,12 @@
-// Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize charts
+
     initializeCharts();
 
-    // Handle contact form submission
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', handleFormSubmit);
     }
 
-    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -20,9 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Initialize Chart.js charts
 function initializeCharts() {
-    // Sample data for first chart (Bar Chart)
     const ctx1 = document.getElementById('chart1');
     if (ctx1) {
         new Chart(ctx1, {
@@ -62,7 +57,6 @@ function initializeCharts() {
         });
     }
 
-    // Sample data for second chart (Line Chart)
     const ctx2 = document.getElementById('chart2');
     if (ctx2) {
         new Chart(ctx2, {
@@ -89,20 +83,15 @@ function initializeCharts() {
     }
 }
 
-// Handle form submission
 function handleFormSubmit(e) {
     e.preventDefault();
 
-    // Get form data
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
 
-    // Here you would typically send the data to a server
     console.log('Form submitted with data:', data);
 
-    // Show success message
     alert('Thank you for your message! I will get back to you soon.');
 
-    // Reset form
     e.target.reset();
 } 
