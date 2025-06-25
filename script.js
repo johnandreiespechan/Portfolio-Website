@@ -15,6 +15,62 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // Modal slider for badges
+    const badgeSlides = [
+      {img: 'img/certificate-badge/badge1.jpg', desc: 'Badge 1 description here.'},
+      {img: 'img/certificate-badge/badge2.jpg', desc: 'Badge 2 description here.'}
+    ];
+    let badgeIdx = 0;
+    const badgeModal = document.getElementById('badgeModal');
+    const badgeCard = document.getElementById('badge-card');
+    if (badgeCard && badgeModal) {
+      badgeCard.onclick = () => { badgeIdx = 0; showBadge(badgeIdx, true); badgeModal.style.display = 'flex'; };
+      document.getElementById('closeBadgeModal').onclick = () => { badgeModal.style.display = 'none'; };
+      document.getElementById('prevBadge').onclick = () => { badgeIdx = (badgeIdx-1+badgeSlides.length)%badgeSlides.length; showBadge(badgeIdx, false); };
+      document.getElementById('nextBadge').onclick = () => { badgeIdx = (badgeIdx+1)%badgeSlides.length; showBadge(badgeIdx, false); };
+    }
+    function showBadge(idx, instant) {
+      const img = document.getElementById('badgeImg');
+      img.classList.remove('active');
+      setTimeout(() => {
+        img.src = badgeSlides[idx].img;
+        document.getElementById('badgeDesc').innerText = badgeSlides[idx].desc;
+        document.getElementById('badgeIndicator').innerText = `${idx+1} / ${badgeSlides.length}`;
+        img.classList.add('active');
+      }, instant ? 0 : 200);
+    }
+
+    // Modal slider for certificates
+    const certSlides = [
+      {img: 'img/certificate-badge/JPCS BSU Alangilan 0082 John Andrei E. Chan (1)_page-0001.jpg', desc: 'Certificate 1 description here.'},
+      {img: 'img/certificate-badge/cert2.jpg', desc: 'Certificate 2 description here.'}
+    ];
+    let certIdx = 0;
+    const certModal = document.getElementById('certModal');
+    const certCard = document.getElementById('cert-card');
+    if (certCard && certModal) {
+      certCard.onclick = () => { certIdx = 0; showCert(certIdx, true); certModal.style.display = 'flex'; };
+      document.getElementById('closeCertModal').onclick = () => { certModal.style.display = 'none'; };
+      document.getElementById('prevCert').onclick = () => { certIdx = (certIdx-1+certSlides.length)%certSlides.length; showCert(certIdx, false); };
+      document.getElementById('nextCert').onclick = () => { certIdx = (certIdx+1)%certSlides.length; showCert(certIdx, false); };
+    }
+    function showCert(idx, instant) {
+      const img = document.getElementById('certImg');
+      img.classList.remove('active');
+      setTimeout(() => {
+        img.src = certSlides[idx].img;
+        document.getElementById('certDesc').innerText = certSlides[idx].desc;
+        document.getElementById('certIndicator').innerText = `${idx+1} / ${certSlides.length}`;
+        img.classList.add('active');
+      }, instant ? 0 : 200);
+    }
+
+    // Close modal when clicking outside content
+    window.onclick = function(event) {
+      if (event.target === badgeModal) badgeModal.style.display = 'none';
+      if (event.target === certModal) certModal.style.display = 'none';
+    };
 });
 
 function initializeCharts() {
@@ -94,4 +150,4 @@ function handleFormSubmit(e) {
     alert('Thank you for your message! I will get back to you soon.');
 
     e.target.reset();
-} 
+}
