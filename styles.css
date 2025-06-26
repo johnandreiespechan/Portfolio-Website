@@ -290,6 +290,9 @@ body {
     justify-content: center;
     gap: 1.5rem;
     margin-top: 2rem;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.4s;
 }
 
 .social-icon {
@@ -363,6 +366,76 @@ footer {
   text-align: center;
 }
 
+/* Why Would You Hire Me? Section */
+.why-hire-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem auto;
+  align-items: center;
+  justify-content: center;
+}
+.why-hire-reasons {
+  flex: 2 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.reason {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  text-align: center;
+}
+.reason i {
+  font-size: 2.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+.reason h3 {
+  margin: 0.5rem 0 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+.reason p {
+  color: #555;
+  font-size: 1rem;
+}
+.why-hire-extra {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.why-hire-stats {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.stat {
+  background: var(--light-bg);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  min-width: 90px;
+}
+.stat span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.stat small {
+  color: #666;
+  font-size: 0.95rem;
+}
+.why-hire-cta {
+  margin-top: 1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
@@ -380,4 +453,16 @@ footer {
     .section {
         padding: 3rem 1rem;
     }
+}
+
+@media (max-width: 900px) {
+  .why-hire-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .why-hire-extra {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
 }

@@ -35,6 +35,57 @@
       </div>
     </section>
 
+    <section id="why-hire-me" class="section">
+      <h2>Why Would You Hire Me?</h2>
+      <div class="why-hire-grid">
+        <div class="why-hire-reasons">
+          <div class="reason">
+            <i class="fas fa-chart-line"></i>
+            <h3>Data-Driven Results</h3>
+            <p>
+              I turn raw data into actionable insights that drive business growth
+              and smarter decisions.
+            </p>
+          </div>
+          <div class="reason">
+            <i class="fas fa-user-check"></i>
+            <h3>Reliable & On-Time</h3>
+            <p>
+              Consistently deliver projects on schedule with attention to detail
+              and quality.
+            </p>
+          </div>
+          <div class="reason">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Problem Solver</h3>
+            <p>
+              Love tackling complex challenges and finding creative, effective
+              solutions.
+            </p>
+          </div>
+        </div>
+        <div class="why-hire-extra">
+          <div class="why-hire-stats">
+            <div class="stat">
+              <span>5+</span>
+              <small>Completed Projects</small>
+            </div>
+            <div class="stat">
+              <span>3</span>
+              <small>Analytics Tools Mastered</small>
+            </div>
+            <div class="stat">
+              <span>100%</span>
+              <small>On-Time Delivery</small>
+            </div>
+          </div>
+          <div class="why-hire-cta">
+            <a href="#contact" class="btn primary">Let's Work Together!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="projects" class="section">
       <h2>Featured Projects</h2>
       <div class="projects-grid">
@@ -130,7 +181,13 @@
       <div class="blog-grid">
         <article class="blog-card" id="badge-card" style="cursor:pointer;">
           <div>
-            <h3>Badges <i class="fas fa-award" style="font-size: 1.5rem; color: #f2c811;"></i></h3>
+            <h3>
+              Badges
+              <i
+                class="fas fa-award"
+                style="font-size: 1.5rem; color: #f2c811;"
+              ></i>
+            </h3>
           </div>
           <p>
             Understanding the basics of data analysis and its importance in
@@ -140,7 +197,13 @@
         </article>
         <article class="blog-card" id="cert-card" style="cursor:pointer;">
           <div>
-            <h3>Certificates <i class="fas fa-certificate" style="font-size: 1.5rem; color: #3498db;"></i></h3>
+            <h3>
+              Certificates
+              <i
+                class="fas fa-certificate"
+                style="font-size: 1.5rem; color: #3498db;"
+              ></i>
+            </h3>
           </div>
           <p>
             Learn how to create effective and impactful data visualizations.
@@ -148,27 +211,87 @@
           <a href="#" class="read-more">Read More</a>
         </article>
       </div>
-      <div id="badgeModal" class="modal" style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
-        <div class="modal-content" style="background:#fff; border-radius:16px; padding:2rem; width:90vw; max-width:700px; position:relative; text-align:center;">
-          <span class="close" id="closeBadgeModal" style="position:absolute; top:10px; right:18px; font-size:2rem; cursor:pointer;">&times;</span>
-          <img id="badgeImg" class="slide-img active" src="" alt="Badge" style="width:100%; max-height:70vh; object-fit:contain; border-radius:12px; margin-bottom:1rem; background:#f5f6fa; box-shadow:0 2px 8px rgba(44,62,80,0.08);" />
+      <div
+        id="badgeModal"
+        class="modal"
+        style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;"
+      >
+        <div
+          class="modal-content"
+          style="background:#fff; border-radius:16px; padding:2rem; width:90vw; max-width:700px; position:relative; text-align:center;"
+        >
+          <span
+            class="close"
+            id="closeBadgeModal"
+            style="position:absolute; top:10px; right:18px; font-size:2rem; cursor:pointer;"
+            >&times;</span
+          >
+          <img
+            id="badgeImg"
+            class="slide-img active"
+            src=""
+            alt="Badge"
+            style="width:100%; max-height:70vh; object-fit:contain; border-radius:12px; margin-bottom:1rem; background:#f5f6fa; box-shadow:0 2px 8px rgba(44,62,80,0.08);"
+          />
           <div id="badgeDesc" style="margin-bottom:1rem; font-size:1.1rem;"></div>
           <div class="slider-nav">
-            <button id="prevBadge" class="slider-btn" title="Previous"><i class="fas fa-chevron-left"></i></button>
+            <button
+              id="prevBadge"
+              class="slider-btn"
+              title="Previous"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
             <span id="badgeIndicator" class="slide-indicator"></span>
-            <button id="nextBadge" class="slider-btn" title="Next"><i class="fas fa-chevron-right"></i></button>
+            <button
+              id="nextBadge"
+              class="slider-btn"
+              title="Next"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
           </div>
         </div>
       </div>
-      <div id="certModal" class="modal" style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
-        <div class="modal-content" style="background:#fff; border-radius:16px; padding:2rem; width:100vw; max-width:750px; position:relative; text-align:center;">
-          <span class="close" id="closeCertModal" style="position:absolute; top:10px; right:18px; font-size:2rem; cursor:pointer;">&times;</span>
-          <img id="certImg" class="slide-img active" src="img/certificate-badge/JPCS BSU Alangilan 0082 John Andrei E. Chan (1)_page-0001.jpg" alt="Certificate" style="width:100%; max-height:70vh; object-fit:contain; border-radius:12px; margin-bottom:1rem; background:#f5f6fa; box-shadow:0 2px 8px rgba(44,62,80,0.08);" />
+      <div
+        id="certModal"
+        class="modal"
+        style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;"
+      >
+        <div
+          class="modal-content"
+          style="background:#fff; border-radius:16px; padding:2rem; width:100vw; max-width:750px; position:relative; text-align:center;"
+        >
+          <span
+            class="close"
+            id="closeCertModal"
+            style="position:absolute; top:10px; right:18px; font-size:2rem; cursor:pointer;"
+            >&times;</span
+          >
+          <img
+            id="certImg"
+            class="slide-img active"
+            src="img/certificate-badge/JPCS BSU Alangilan 0082 John Andrei E. Chan (1)_page-0001.jpg"
+            alt="Certificate"
+            style="width:100%; max-height:70vh; object-fit:contain; border-radius:12px; margin-bottom:1rem; background:#f5f6fa; box-shadow:0 2px 8px rgba(44,62,80,0.08);"
+          />
           <div id="certDesc" style="margin-bottom:1rem; font-size:1.1rem;"></div>
           <div class="slider-nav">
-            <button id="prevCert" class="slider-btn" title="Previous"><i class="fas fa-chevron-left"></i></button>
+            <button
+              id="prevCert"
+              class="slider-btn"
+              title="Previous"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
             <span id="certIndicator" class="slide-indicator"></span>
-            <button id="nextCert" class="slider-btn" title="Next"><i class="fas fa-chevron-right"></i></button>
+            <button
+              id="nextCert"
+              class="slider-btn"
+              title="Next"
+            >
+              <i class="fas fa-chevron-right"></i>
+            </button>
           </div>
         </div>
       </div>

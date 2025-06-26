@@ -71,6 +71,24 @@ document.addEventListener('DOMContentLoaded', function () {
       if (event.target === badgeModal) badgeModal.style.display = 'none';
       if (event.target === certModal) certModal.style.display = 'none';
     };
+
+    // Show social links when 'Let's Work Together!' is clicked
+    const workTogetherBtn = document.querySelector('.why-hire-cta .btn.primary');
+    const contactSection = document.getElementById('contact');
+    const socialLinks = document.querySelector('.social-links');
+    if (workTogetherBtn && contactSection && socialLinks) {
+        workTogetherBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+            // Pop effect: show and animate social links
+            socialLinks.style.transition = 'transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.4s';
+            socialLinks.style.transform = 'scale(1.15)';
+            socialLinks.style.opacity = '1';
+            setTimeout(() => {
+                socialLinks.style.transform = 'scale(1)';
+            }, 400);
+        });
+    }
 });
 
 function initializeCharts() {
