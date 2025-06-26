@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Modal slider for certificates
     const certSlides = [
       {img: 'img/certificate-badge/JPCS BSU Alangilan 0082 John Andrei E. Chan (1)_page-0001.jpg', desc: 'Certificate 1 description here.'},
-      {img: 'img/certificate-badge/cert2.jpg', desc: 'Certificate 2 description here.'}
+      {img: 'img/certificate-badge/random-cert.jpg', desc: 'Certificate 2 description here.'}
     ];
     let certIdx = 0;
     const certModal = document.getElementById('certModal');
@@ -72,22 +72,35 @@ document.addEventListener('DOMContentLoaded', function () {
       if (event.target === certModal) certModal.style.display = 'none';
     };
 
-    // Show social links when 'Let's Work Together!' is clicked
+    // Modern pop-up effect: social icons animate one by one when contact is in view
     const workTogetherBtn = document.querySelector('.why-hire-cta .btn.primary');
     const contactSection = document.getElementById('contact');
     const socialLinks = document.querySelector('.social-links');
-    if (workTogetherBtn && contactSection && socialLinks) {
+    const socialIcons = document.querySelectorAll('.social-icon');
+    let highlightPending = false;
+    if (workTogetherBtn && contactSection && socialLinks && socialIcons.length) {
         workTogetherBtn.addEventListener('click', function (e) {
             e.preventDefault();
+            highlightPending = true;
             contactSection.scrollIntoView({ behavior: 'smooth' });
-            // Pop effect: show and animate social links
-            socialLinks.style.transition = 'transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.4s';
-            socialLinks.style.transform = 'scale(1.15)';
-            socialLinks.style.opacity = '1';
-            setTimeout(() => {
-                socialLinks.style.transform = 'scale(1)';
-            }, 400);
         });
+        // Intersection Observer to trigger pop-up when contact section is visible
+        const observer = new window.IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && highlightPending) {
+                    socialIcons.forEach((icon, idx) => {
+                        setTimeout(() => {
+                            icon.classList.add('pop-animate');
+                            setTimeout(() => {
+                                icon.classList.remove('pop-animate');
+                            }, 800); // prolong effect to 800ms
+                        }, idx * 220); // prolong stagger to 220ms
+                    });
+                    highlightPending = false;
+                }
+            });
+        }, { threshold: 0.5 });
+        observer.observe(contactSection);
     }
 });
 

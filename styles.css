@@ -1,10 +1,12 @@
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
+    --primary-color: #111111;
+    --secondary-color: #ffffff;
     --accent-color: #e74c3c;
-    --text-color: #333;
-    --light-bg: #f5f6fa;
+    --text-color: #f5f5f5;
+    --light-bg: #222222;
     --white: #ffffff;
+    --card-bg: #181818;
+    --border-color: #333333;
 }
 
 * {
@@ -16,6 +18,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    background: var(--primary-color);
     color: var(--text-color);
 }
 
@@ -23,9 +26,9 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -35,7 +38,7 @@ body {
 .nav-brand {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .nav-menu {
@@ -52,7 +55,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--secondary-color);
+    color: var(--accent-color);
 }
 
 .hero {
@@ -60,8 +63,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
+    background: linear-gradient(135deg, var(--primary-color), var(--card-bg));
+    color: var(--secondary-color);
     text-align: center;
     padding: 0 1rem;
 }
@@ -92,13 +95,13 @@ body {
 
 .btn.primary {
     background-color: var(--secondary-color);
-    color: var(--white);
+    color: var(--primary-color);
 }
 
 .btn.secondary {
     background-color: transparent;
-    border: 2px solid var(--white);
-    color: var(--white);
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
     margin-left: 1rem;
 }
 
@@ -110,7 +113,7 @@ body {
 .section h2 {
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 /* Projects Grid */
@@ -123,11 +126,13 @@ body {
 }
 
 .project-card {
-    background: var(--white);
+    background: var(--card-bg);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
 }
 
 .project-card:hover {
@@ -165,7 +170,7 @@ body {
 
 .project-card h3 {
     padding: 1rem;
-    color: var(--primary-color);
+    color: #8a8a8a;
 }
 
 .project-card p {
@@ -226,10 +231,12 @@ body {
 .education-card {
     max-width: 800px;
     margin: 0 auto;
-    background: var(--white);
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
 }
 
 .education-details {
@@ -247,14 +254,16 @@ body {
 }
 
 .blog-card {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
 }
 
 .read-more {
-    color: var(--secondary-color);
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -290,25 +299,31 @@ body {
     justify-content: center;
     gap: 1.5rem;
     margin-top: 2rem;
-    opacity: 1;
-    transform: scale(1);
-    transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.4s;
+    background: none;
 }
 
 .social-icon {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.5rem;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.4s;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .social-icon:hover {
-    color: var(--secondary-color);
+    color: var(--accent-color);
+}
+
+.social-icon.pop-animate {
+    opacity: 1 !important;
+    transform: scale(1.18);
+    z-index: 2;
 }
 
 /* Footer */
 footer {
-    background: var(--primary-color);
-    color: var(--white);
+    background: var(--card-bg);
+    color: var(--secondary-color);
     text-align: center;
     padding: 1rem;
 }
@@ -323,6 +338,9 @@ footer {
   padding-top: 2.5rem !important;
   padding-right: 2.5rem !important;
   position: relative;
+  background: var(--card-bg) !important;
+  color: var(--secondary-color);
+  border: 1px solid var(--border-color);
 }
 .slide-img {
   opacity: 0;
@@ -341,13 +359,13 @@ footer {
   margin-top: 0.5rem;
 }
 .slider-btn {
-  background: #f5f6fa;
+  background: var(--light-bg);
   border: none;
   border-radius: 50%;
   width: 44px;
   height: 44px;
   font-size: 1.5rem;
-  color: #2c3e50;
+  color: var(--secondary-color);
   box-shadow: 0 2px 8px rgba(44,62,80,0.08);
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
@@ -356,12 +374,12 @@ footer {
   justify-content: center;
 }
 .slider-btn:hover {
-  background: #3498db;
-  color: #fff;
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
 .slide-indicator {
   font-size: 1rem;
-  color: #888;
+  color: #bbb;
   min-width: 40px;
   text-align: center;
 }
@@ -383,9 +401,11 @@ footer {
   gap: 2rem;
 }
 .reason {
-  background: var(--white);
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.08);
   padding: 1.5rem 1.5rem 1rem 1.5rem;
   text-align: center;
 }
@@ -398,9 +418,10 @@ footer {
   margin: 0.5rem 0 0.5rem 0;
   color: var(--primary-color);
   font-size: 1.2rem;
+  color: #8a8a8a;
 }
 .reason p {
-  color: #555;
+  color: #ffffff;
   font-size: 1rem;
 }
 .why-hire-extra {
@@ -417,6 +438,8 @@ footer {
 }
 .stat {
   background: var(--light-bg);
+  color: var(--secondary-color);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 1rem 1.2rem;
   text-align: center;
@@ -426,10 +449,10 @@ footer {
   display: block;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--secondary-color);
+  color: #8a8a8a;
 }
 .stat small {
-  color: #666;
+  color: #ffffff;
   font-size: 0.95rem;
 }
 .why-hire-cta {
@@ -465,4 +488,13 @@ footer {
     justify-content: center;
     gap: 1.5rem;
   }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: var(--primary-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
 }
