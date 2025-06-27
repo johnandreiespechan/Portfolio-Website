@@ -15,11 +15,6 @@
     box-sizing: border-box;
 }
 
-html, body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -344,36 +339,26 @@ body {
 
 /* Modal container */
 .modal {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
+  display: none;
   position: fixed;
+  z-index: 2000;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
-  min-height: 100vh;
-  z-index: 2000;
   background: rgba(0,0,0,0.5);
-  overflow-y: auto;
-  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Modal content */
 .modal-content {
-  margin: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: relative;
-  max-height: 90vh;
-  overflow-y: auto;
-  box-sizing: border-box;
   background: #fff;
   border-radius: 16px;
   padding: 2rem;
   width: 90vw;
   max-width: 700px;
+  position: relative;
   text-align: center;
 }
 #certModal .modal-content {
