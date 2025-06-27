@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const badgeModal = document.getElementById('badgeModal');
     const badgeCard = document.getElementById('badge-card');
     if (badgeCard && badgeModal) {
-      badgeCard.onclick = () => { badgeIdx = 0; showBadge(badgeIdx, true); badgeModal.style.display = 'flex'; };
-      document.getElementById('closeBadgeModal').onclick = () => { badgeModal.style.display = 'none'; };
+      badgeCard.onclick = () => { badgeIdx = 0; showBadge(badgeIdx, true); badgeModal.style.display = 'flex'; badgeModal.classList.add('active'); };
+      document.getElementById('closeBadgeModal').onclick = () => { badgeModal.style.display = 'none'; badgeModal.classList.remove('active'); };
       document.getElementById('prevBadge').onclick = () => { badgeIdx = (badgeIdx-1+badgeSlides.length)%badgeSlides.length; showBadge(badgeIdx, false); };
       document.getElementById('nextBadge').onclick = () => { badgeIdx = (badgeIdx+1)%badgeSlides.length; showBadge(badgeIdx, false); };
     }
@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const certModal = document.getElementById('certModal');
     const certCard = document.getElementById('cert-card');
     if (certCard && certModal) {
-      certCard.onclick = () => { certIdx = 0; showCert(certIdx, true); certModal.style.display = 'flex'; };
-      document.getElementById('closeCertModal').onclick = () => { certModal.style.display = 'none'; };
+      certCard.onclick = () => { certIdx = 0; showCert(certIdx, true); certModal.style.display = 'flex'; certModal.classList.add('active'); };
+      document.getElementById('closeCertModal').onclick = () => { certModal.style.display = 'none'; certModal.classList.remove('active'); };
       document.getElementById('prevCert').onclick = () => { certIdx = (certIdx-1+certSlides.length)%certSlides.length; showCert(certIdx, false); };
       document.getElementById('nextCert').onclick = () => { certIdx = (certIdx+1)%certSlides.length; showCert(certIdx, false); };
     }
@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Close modal when clicking outside content
     window.onclick = function(event) {
-      if (event.target === badgeModal) badgeModal.style.display = 'none';
-      if (event.target === certModal) certModal.style.display = 'none';
+      if (event.target === badgeModal) { badgeModal.style.display = 'none'; badgeModal.classList.remove('active'); }
+      if (event.target === certModal) { certModal.style.display = 'none'; certModal.classList.remove('active'); }
     };
 
     // Modern pop-up effect: social icons animate one by one when contact is in view
@@ -101,6 +101,21 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }, { threshold: 0.5 });
         observer.observe(contactSection);
+    }
+
+    // Mobile navbar toggle
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const mainNavMenu = document.getElementById('mainNavMenu');
+    if (mobileNavToggle && mainNavMenu) {
+        mobileNavToggle.addEventListener('click', function () {
+            mainNavMenu.classList.toggle('show');
+        });
+        // Hide menu when a link is clicked (for better UX)
+        mainNavMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNavMenu.classList.remove('show');
+            });
+        });
     }
 });
 

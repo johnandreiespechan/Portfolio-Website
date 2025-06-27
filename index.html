@@ -14,7 +14,11 @@
   <body>
     <nav class="navbar">
       <div class="nav-brand">Data Analyst</div>
-      <ul class="nav-menu">
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open navigation">
+        <span class="mobile-nav-label">Navigate</span>
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu" id="mainNavMenu">
         <li><a href="#home">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -276,6 +280,7 @@
       <div
         id="badgeModal"
         class="modal"
+        style="display: none;"
       >
         <div
           class="modal-content"
@@ -314,6 +319,7 @@
       <div
         id="certModal"
         class="modal"
+        style="display: none;"
       >
         <div
           class="modal-content"
