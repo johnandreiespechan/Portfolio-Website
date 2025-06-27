@@ -170,7 +170,7 @@ body {
 
 .project-card h3 {
     padding: 1rem;
-    color: #8a8a8a;
+    color: #d3d3d3;
 }
 
 .project-card p {
@@ -185,8 +185,9 @@ body {
 
 /* Skills Section */
 .skills-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .skill-category {
@@ -227,6 +228,122 @@ body {
     border-radius: 5px;
 }
 
+.skills-flex-row {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+.skills-main, .skills-minor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 380px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin-bottom: 1.5rem;
+}
+.skills-main {
+  margin-right: 0.5rem;
+}
+.skills-minor {
+  margin-left: 0.5rem;
+}
+.skills-subtitle {
+  color: var(--secondary-color);
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  text-align: center;
+}
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.minor-icons {
+  gap: 1.2rem;
+  width: 100%;
+  justify-content: flex-start;
+}
+.minor-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+.minor-group-title {
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
+  text-align: left;
+  padding-left: 0.2rem;
+  position: relative;
+}
+.minor-group-title::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 3px;
+  background: #444;
+  border-radius: 2px;
+  margin-top: 0.18rem;
+}
+.skill-icon-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 60px;
+}
+.skill-label {
+  font-size: 0.98rem;
+  color: #c5c5c5;
+  margin-top: 0.2rem;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  text-align: center;
+}
+.minor-tool-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: grayscale(0.2);
+}
+.minor-icons .skill-label {
+  font-size: 0.85rem;
+  color: #bdbdbd;
+  font-weight: 500;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 900px) {
+  .skills-flex-row {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .skills-main, .skills-minor {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+/* --- End Technical Skills Section Alignment Improvements --- */
+
 /* Education Section */
 .education-card {
     max-width: 800px;
@@ -237,6 +354,27 @@ body {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     color: var(--text-color);
     border: 1px solid var(--border-color);
+}
+
+.education-courses-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.education-details {
+  flex: 1 1 220px;
+  margin: 0;
+  padding: 0 1.5rem 1.5rem 0;
+  list-style-position: inside;
+}
+
+.education-details b {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
 }
 
 .education-details {
@@ -443,17 +581,29 @@ footer {
   border-radius: 10px;
   padding: 1rem 1.2rem;
   text-align: center;
-  min-width: 90px;
+  width: 130px;
+  min-width: 130px;
+  max-width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .stat span {
   display: block;
   font-size: 1.5rem;
   font-weight: bold;
   color: #8a8a8a;
+  margin-bottom: 0.2rem;
 }
 .stat small {
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 0.93rem;
+  word-break: break-word;
+  white-space: normal;
+  line-height: 1.2;
+  display: block;
 }
 .why-hire-cta {
   margin-top: 1rem;
@@ -486,6 +636,18 @@ footer {
   .why-hire-extra {
     flex-direction: row;
     justify-content: center;
+    gap: 1.5rem;
+  }
+  .skills-flex-row {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .education-courses-row {
+    flex-direction: column;
     gap: 1.5rem;
   }
 }

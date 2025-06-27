@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Modal slider for badges
     const badgeSlides = [
-      {img: 'img/certificate-badge/badge1.jpg', desc: 'Badge 1 description here.'},
+      {img: 'img/certificate-badge/badge1.jpg', desc: 'Wala Pa HAHAHAHHA, Nakuha palang :>. Sa certificate meron na'},
       {img: 'img/certificate-badge/badge2.jpg', desc: 'Badge 2 description here.'}
     ];
     let badgeIdx = 0;
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Modal slider for certificates
     const certSlides = [
-      {img: 'img/certificate-badge/JPCS BSU Alangilan 0082 John Andrei E. Chan (1)_page-0001.jpg', desc: 'Certificate 1 description here.'},
+      {img: 'img/certificate-badge/JPCS BSU Alangilan 0082 John Andrei E. Chan (1)_page-0001.jpg', desc: 'BULAGA!! JPCS Memship HAHAHAHA. Nakuha palang din ng legit na cert :>'},
       {img: 'img/certificate-badge/random-cert.jpg', desc: 'Certificate 2 description here.'}
     ];
     let certIdx = 0;
