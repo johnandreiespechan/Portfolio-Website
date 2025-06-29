@@ -13,7 +13,7 @@
   </head>
   <body>
     <nav class="navbar">
-      <div class="nav-brand">Data Analyst</div>
+      <div class="nav-brand">Portfolio</div>
       <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open navigation">
         <span class="mobile-nav-label">Navigate</span>
         <i class="fas fa-bars"></i>
@@ -29,13 +29,45 @@
     </nav>
 
     <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="hero-particles"></div>
+      </div>
       <div class="hero-content">
-        <h1>Portfolio</h1>
-        <p class="subtitle">Chan, John Andrei E.</p>
-        <div class="cta-buttons">
-          <a href="#projects" class="btn primary">View Projects</a>
-          <a href="#contact" class="btn secondary">Contact Me</a>
+        <div class="hero-badge">
+          <i class="fas fa-chart-line"></i>
+          <span>Data Analyst</span>
         </div>
+        <h1 class="hero-title">
+          <span class="title-line">Chan, John Andrei E.</span>
+        </h1>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-text">Data Accuracy</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">24/7</span>
+            <span class="stat-text">Analysis Ready</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">∞</span>
+            <span class="stat-text">Insights Generated</span>
+          </div>
+        </div>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn primary">
+            <i class="fas fa-eye"></i>
+            View Projects
+          </a>
+          <a href="#contact" class="btn secondary">
+            <i class="fas fa-paper-plane"></i>
+            Contact Me
+          </a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+        <span>Scroll to explore</span>
       </div>
     </section>
 
@@ -110,10 +142,44 @@
         </a>
         <div class="project-card">
           <div class="project-image">
-            <canvas id="chart2"></canvas>
+            <div class="dashboard-container">
+              <div class="dashboard-header">
+                <h4>Interactive Analytics Dashboard</h4>
+                <div class="dashboard-controls">
+                  <select id="chartType" class="dashboard-select">
+                    <option value="bar">Bar Chart</option>
+                    <option value="line">Line Chart</option>
+                    <option value="doughnut">Doughnut Chart</option>
+                  </select>
+                  <select id="dataSet" class="dashboard-select">
+                    <option value="sales">Sales Data</option>
+                    <option value="users">User Growth</option>
+                    <option value="performance">Performance Metrics</option>
+                  </select>
+                </div>
+              </div>
+              <canvas id="chart2"></canvas>
+              <div class="dashboard-stats">
+                <div class="stat-item">
+                  <span class="stat-value" id="totalValue">0</span>
+                  <span class="stat-label">Total</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value" id="avgValue">0</span>
+                  <span class="stat-label">Average</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value" id="maxValue">0</span>
+                  <span class="stat-label">Peak</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <h3>On Going Project #2</h3>
-          <p>On going</p>
+          <h3>Interactive Analytics Dashboard</h3>
+          <p>
+            <b>Dynamic visualization</b> demonstrating real-time data analysis capabilities with multiple chart types and datasets
+          </p>
+          <p><b>Tools:</b> Chart.js, JavaScript, Data Analysis</p>
         </div>
       </div>
     </section>
@@ -126,30 +192,72 @@
             <div title="Excel" class="skill-icon-label">
               <img src="img/excel.webp" alt="Excel" class="main-tool-img" />
               <span class="skill-label">Excel</span>
+              <div class="skill-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 95%"></div>
+                </div>
+                <span class="progress-text">95%</span>
+              </div>
             </div>
             <div title="SQL" class="skill-icon-label">
               <img src="img/sql.webp" alt="SQL" class="main-tool-img" />
               <span class="skill-label">SQL</span>
+              <div class="skill-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
+                <span class="progress-text">90%</span>
+              </div>
             </div>
             <div title="Python" class="skill-icon-label">
               <img src="img/python.webp" alt="Python" class="main-tool-img" />
               <span class="skill-label">Python</span>
+              <div class="skill-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+                <span class="progress-text">85%</span>
+              </div>
             </div>
             <div title="NumPy" class="skill-icon-label">
               <img src="img/numpy.webp" alt="NumPy" class="main-tool-img" />
               <span class="skill-label">NumPy</span>
+              <div class="skill-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 80%"></div>
+                </div>
+                <span class="progress-text">80%</span>
+              </div>
             </div>
             <div title="Matplotlib" class="skill-icon-label">
               <img src="img/matplotlib.png" alt="Matplotlib" class="main-tool-img" />
               <span class="skill-label">Matplotlib</span>
+              <div class="skill-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+                <span class="progress-text">85%</span>
+              </div>
             </div>
             <div title="Power BI" class="skill-icon-label">
               <img src="img/power bi.png" alt="Power BI" class="main-tool-img" />
               <span class="skill-label">Power BI</span>
+              <div class="skill-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 88%"></div>
+                </div>
+                <span class="progress-text">88%</span>
+              </div>
             </div>
             <div title="PostgreSQL" class="skill-icon-label">
               <img src="img/postgresql.webp" alt="PostgreSQL" class="main-tool-img" />
               <span class="skill-label">PostgreSQL</span>
+              <div class="skill-progress">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 82%"></div>
+                </div>
+                <span class="progress-text">82%</span>
+              </div>
             </div>
           </div>
         </div>
@@ -360,26 +468,41 @@
     <section id="contact" class="section">
       <h2>GET IN TOUCH</h2>
       <div class="contact-container">
+        <div class="contact-intro">
+          <p>Ready to transform your data into actionable insights? Let's collaborate on your next project.</p>
+        </div>
         <div class="social-links">
           <a
             href="https://www.upwork.com/freelancers/~01d5ae05fca13f261a?viewMode=1"
             class="social-icon"
+            title="Upwork Profile"
             ><i class="fab fa-upwork"></i
           ></a>
           <a href="https://github.com/johnandreiespechan" class="social-icon"
+            title="GitHub Profile"
             ><i class="fab fa-github"></i
           ></a>
           <a href="https://www.facebook.com/aanjo.chan" class="social-icon"
+            title="Facebook Profile"
             ><i class="fab fa-facebook"></i
           ></a>
           <a href="https://www.instagram.com/jhndreichan" class="social-icon"
+            title="Instagram Profile"
             ><i class="fab fa-instagram"></i
           ></a>
           <a
             href="https://mail.google.com/mail/u/0/#search/johnandreiespechan%40gmail.com?compose=DmwnWrRmTwpTtKQqwWLNWrFFPKwmmFplfgCBthvbbtvMHVFXQXrPBSqmDJwpzqTzhdtsbLWtpvPq"
             class="social-icon"
+            title="Email Me"
             ><i class="fab fa-google"></i
           ></a>
+        </div>
+        <div class="contact-cta">
+          <p>Available for freelance opportunities and full-time positions</p>
+          <a href="mailto:johnandreiespechan@gmail.com" class="btn primary contact-btn">
+            <i class="fas fa-envelope"></i>
+            Send Email
+          </a>
         </div>
       </div>
     </section>
