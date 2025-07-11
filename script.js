@@ -289,7 +289,6 @@ function initializeCharts() {
             requestAnimationFrame(updateValue);
         }
 
-        // Event listeners for dashboard controls
         const chartTypeSelect = document.getElementById('chartType');
         const dataSetSelect = document.getElementById('dataSet');
 
