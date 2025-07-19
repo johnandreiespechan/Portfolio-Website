@@ -1654,9 +1654,9 @@ footer {
 }
 
 .dashboard-select {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  color: #000000;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
   font-size: 0.85rem;
